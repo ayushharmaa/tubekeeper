@@ -9,16 +9,15 @@ const channelForm=document.getElementById('channel-form');
 const channelInput=document.getElementById('channel-input');
 const videoContainer=document.getElementById('video=container');
 
-const defaultChannel = 'techguyweb';
+const defaultChannel = 'pewdiepie';
 
-//Form submit and change channel 
 channelForm.addEventListener('submit', e => {
     e.preventDefault();
     const channel = channelInput.value;
     getChannel(channel);
 })
 
-// Load auth2 library
+
 function handleClientLoad(){
     gapi.load('client:auth2', initClient);
 }
@@ -55,12 +54,12 @@ function updateSigninStatus(isSignedIn){
     }
 }
 
-//Handle login
+
 function handleAuthClick(){
     gapi.auth2.getAuthInstance().signIn();
 }
 
-//Handle logout
+
 function handleAuthClick(){
     gapi.auth2.getAuthInstance().signOut();
 }
